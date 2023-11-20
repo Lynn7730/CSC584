@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ERP - Project</title>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #ffb347;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .main {
+      margin-left: 160px;
+      padding: 0px 10px;
+    }
+
+    .page-title {
+      height: 60px;
+      width: 100%;
+      background-color: #818181;
+    }
+
+    table {
+      width: 100%;
+    }
+    table,
+    th,
+    td {
+      border: solid black;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidenav">
+    <a href="#">Home</a>
+    <a href="#">Sales</a>
+    <a href="#">Sales Order</a>
+    <a href="#">Inventory</a>
+    <a href="#">Product</a>
+    <a href="#">Project</a>
+    <a href="#">Settings</a>
+    <a href="#">User</a>
+  </div>
+  <div class="main">
+    <header>
+      <h1 class="page-title">Project</h1>
+    </header>
+    <div class="table">
+      <button class="create-button" href="#">Create</button>
+      <table class="project-table">
+        <tr>
+          <th>Project ID</th>
+          <th>Project Client ID</th>
+          <th>Project Staff-in-Charge</th>
+          <th>Project Name</th>
+          <th>Project Description</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>0001</td>
+          <td>0001</td>
+          <td>0001</td>
+          <td>test</td>
+          <td>description test</td>
+          <td>
+            <button class="edit-button" href="ProjectEdit.html">Edit</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
