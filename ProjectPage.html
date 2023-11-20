@@ -45,14 +45,22 @@
       background-color: #818181;
     }
 
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
     table {
       width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
     }
-    table,
-    th,
-    td {
-      border: solid black;
-      background-color: #fff;
+    tr:nth-child(even) {
+      background-color: #adadad;
     }
   </style>
 </head>
@@ -69,7 +77,7 @@
     <header>
       <h1 class="page-title">Project</h1>
     </header>
-    <div class="table">
+    <div class="container">
       <button class="create-button" href="#">Create</button>
       <table class="project-table">
         <tr>
