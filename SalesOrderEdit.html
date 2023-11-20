@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<head>
+  <title>ERP - Sales Order</title>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #ffb347;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .main {
+      margin-left: 160px;
+      padding: 0px 10px;
+    }
+
+    .page-title {
+      height: 60px;
+      width: 100%;
+      background-color: #818181;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type="submit"] {
+      background-color: #04aa6d;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: left;
+    }
+
+    input[type="button"] {
+      background-color: #aa3004;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: left;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media screen and (max-width: 600px) {
+      .col-25,
+      .col-75,
+      input[type="submit"] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+    table {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    tr:nth-child(even) {
+      background-color: #adadad;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidenav">
+    <a href="#">Home</a>
+    <a href="#">Sales</a>
+    <a href="#">Sales Order</a>
+    <a href="#">Inventory</a>
+    <a href="#">Product</a>
+    <a href="#">Project</a>
+    <a href="#">Settings</a>
+    <a href="#">User</a>
+  </div>
+  <div class="main">
+    <header>
+      <h1 class="page-title">Edit Sales Order</h1>
+    </header>
+    <div class="container">
+      <form action="#">
+        <div class="row">
+          <input type="submit" value="Submit" />
+          <input type="button" value="Cancel" href="SalesOrder.html" />
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Sales ID</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="sID"
+              name="salesid"
+              placeholder="0001"
+              readonly
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Sales Client</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="sClient"
+              name="salesclient"
+              placeholder="Doe"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Project ID</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="pID"
+              name="projectid"
+              placeholder="0011"
+              readonly
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Order Date</label>
+          </div>
+          <div class="col-75">
+            <input type="date" id="od" name="orderdate" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="status">Status</label>
+          </div>
+          <div class="col-75">
+            <select id="status" name="status">
+              <option value="New">New</option>
+              <option value="Confirm">Confirm</option>
+              <option value="OnDelivery">On Delivery</option>
+              <option value="Completed">Complete</option>
+              <option value="Cancel">Cancel</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <table class="sales-order-table">
+        <tr>
+          <th>Sales Order Line ID</th>
+          <th>Sales Order Line Order ID</th>
+          <th>Sales Order Line Product ID</th>
+          <th>Sales Order Line Product Quantity</th>
+        </tr>
+        <tr>
+          <td>0001</td>
+          <td>0011</td>
+          <td>0111</td>
+          <td>69</td>
+        </tr>
+        <tr>
+          <td><button class="add-button">Add new row</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
