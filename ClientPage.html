@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ERP - Client</title>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #ffb347;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .main {
+      margin-left: 160px;
+      padding: 0px 10px;
+    }
+
+    .page-title {
+      height: 60px;
+      width: 100%;
+      background-color: #818181;
+    }
+
+    table {
+      width: 100%;
+    }
+    table,
+    th,
+    td {
+      border: solid black;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidenav">
+    <a href="home.html">Home</a>
+    <a href="SalesOrder.html">Sales</a>
+    <a href="Inventory.html">Inventory</a>
+    <a href="ProjectPage.html">Project</a>
+    <a href="#">Settings</a>
+    <a href="UserPage.html">User</a>
+  </div>
+  <div class="main">
+    <header>
+      <h1 class="page-title">User</h1>
+    </header>
+    <div class="table">
+      <button class="create-button" href="#">Create</button>
+      <table class="user-table">
+        <tr>
+          <th>Client ID</th>
+          <th>Client Name</th>
+          <th>Staff Phone Number</th>
+		  <th>Staff Email</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>0001</td>
+          <td>John Doe</td>
+          <td>0123456789</td>
+          <td>JohnDoe@client.com</td>
+          <td>
+            <button class="edit-button" href="UserEdit.html">Edit</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
