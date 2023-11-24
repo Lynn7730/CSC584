@@ -70,27 +70,41 @@
   </div>
   <div class="main">
     <header>
-      <h1 class="page-title"> Inventory </h1>
+      <h1 class="page-title"> Enter Product Details</h1>
     </header>
     <div class="table">
-        <div style="height: 1vh;"></div>
-        <button>Create</button>
-        <a href="Product.html">Create</a>
+      <form>
         <table>
             <tr>
-                <th>Product ID</th>
-                <th>Product Name</th>
-                <th>Product Cost</th>
+                <td style="text-align: center">
+                    <br>
+                    <label for="pName">Product Name:</label><br>
+                    <input type="text" id="pName" name="pName" value="ProductName"><br><br>
+                </td>
+                <td style="text-align: center">
+                    <br>
+                    <label for="pId">Product ID:</label><br>
+                    <input type="text" id="pId" name="pId" value="P0001"><br><br>
+                </td>
             </tr>
             <tr>
-                <td>P0001</td>
-                <td>Floaty</td>
-                <td>RM200.00</td>
+                <td style="text-align: center">
+                    <br>
+                    <label for="pCost">Product Cost (RM):</label><br>
+                    <input type="text" id="pCost" name="pCost" value="XXXX.XX"><br><br>
+                </td>
+                <td style="text-align: center">
+                    <br>
+                    <label for="pPrice">Product Price (RM):</label><br>
+                    <input type="text" id="pPrice" name="pPrice" value="XXXX.XX"><br><br>
+                </td>
             </tr>
         </table>
+        <input type="submit" value="Submit">
+      </form>
     </div>
-    <form action="Product.html">
+    <form action="Inventory.html">
         <input class="edit" type="submit" value="Edit" />
-    </form>  
+    </form>
   </div>
 </body>
